@@ -1,4 +1,4 @@
-package Service;
+package com.skypro.vadim.calculator.controller;
 
 import org.springframework.stereotype.Service;
 
