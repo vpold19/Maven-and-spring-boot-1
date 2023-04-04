@@ -4,16 +4,16 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CalculatorService {
-    public float plus(float a, float b) {
+    public int plus(int a, int b) {
         return a + b;
     }
-    public float minus(float a, float b) {
+    public int minus(int a, int b) {
         return a - b;
     }
-    public float multiply(float a, float b) {
+    public int multiply(int a, int b) {
         return a * b;
     }
-    public float divide(float a, float b) {
+    public int divide(int a, int b) {
         return a / b;
     }
 }

@@ -18,26 +18,26 @@ public class ControllerCalculator {
     }
 
     @GetMapping("/calculator/plus")
-    public String plus(@RequestParam(value = "num1", required = false) Float a, @RequestParam(value = "num2", required = false) Float b) {
+    public String plus(@RequestParam(value = "num1", required = false) Integer a, @RequestParam(value = "num2", required = false) Integer b) {
         return buildView("+", a, b);
     }
 
     @GetMapping("/calculator/minus")
-    public String minus(@RequestParam(value = "num1", required = false) Float a, @RequestParam(value = "num2", required = false) Float b) {
+    public String minus(@RequestParam(value = "num1", required = false) Integer a, @RequestParam(value = "num2", required = false) Integer b) {
         return buildView("-", a, b);
     }
 
     @GetMapping("/calculator/multiply")
-    public String multiply(@RequestParam(value = "num1", required = false) Float a, @RequestParam(value = "num2", required = false) Float b) {
+    public String multiply(@RequestParam(value = "num1", required = false) Integer a, @RequestParam(value = "num2", required = false) Integer b) {
         return buildView("*", a, b);
     }
 
     @GetMapping("/calculator/divide")
-    public String divide(@RequestParam(value = "num1", required = false) Float a, @RequestParam(value = "num2", required = false) Float b) {
+    public String divide(@RequestParam(value = "num1", required = false) Integer a, @RequestParam(value = "num2", required = false) Integer b) {
         return buildView("/", a, b);
     }
 
-    private String buildView(String operation, Float operand1, Float operand2) {
+    private String buildView(String operation, Integer operand1, Integer operand2) {
         if (operand1 == null) {
             return "Не передано первое число";
         } else if (operand2 == null) {
@@ -62,7 +62,7 @@ public class ControllerCalculator {
                 result = calculatorService.divide(operand1, operand2);
                 break;
         }
-        return operand1 + " " + " " + operand2 + " = " + result;
+        return operand1 + " " + operation + " " + operand2 + " = " + result;
     }
 }
 
