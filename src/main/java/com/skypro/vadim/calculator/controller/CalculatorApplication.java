@@ -1,4 +1,4 @@
-package com.skypro.vadim.calculator;
+package com.skypro.vadim.calculator.controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
